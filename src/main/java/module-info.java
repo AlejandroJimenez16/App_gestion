@@ -9,7 +9,12 @@ module org.example.app_gestion {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
-    opens org.example.app_gestion to javafx.fxml;
-    exports org.example.app_gestion;
+    opens app to javafx.fxml;
+    exports app;
+    exports database;
+    opens database to javafx.fxml;
+    exports controllers;
+    opens controllers to javafx.fxml;
 }
